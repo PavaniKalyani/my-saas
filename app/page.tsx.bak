@@ -1,0 +1,42 @@
+export default function Home() 
+{
+  return (
+    <main className="min-h-screen flex flex-col items-start justify-start bg-gray-50 p-6"> 
+    {/* Header + Contact Info (centered) */}
+      <div className="w-full flex flex-col items-center">
+        <h1 className="text-black text-3xl font-bold text-center">
+          Pavani Gopisetti | Data and AI Engineer
+        </h1>
+
+        <div className="flex flex-col md:flex-row gap-4 mt-4 text-black text-center">
+          <p><span className="font-bold">Email:</span> pavani@dummymail.com</p>
+          <p><span className="font-bold">Mobile:</span> +91 xxx xxx xxx </p>
+          <p><span className="font-bold">Linkedin:</span> https://linkedin.com/in/pavanig</p>
+          <p><span className="font-bold">GitHub:</span> https://github.com/pavanig</p>
+        </div>
+      </div>
+   
+  
+
+  {/* About Me */}
+  <section className="max-w-3xl mt-4 text-gray-800 text-left p-12">
+    <h2 className="text-2xl font-bold mb-4 ">About Me</h2>
+    <p>
+      6+ Years Experienced Data and AI Engineer with a successful track record of providing high-quality deliverables in building, optimizing, maintaining, and supporting Data Engineering Products. Seeking opportunities to contribute expertise and thrive in a challenging, ambitious environment.
+    </p>
+  </section>
+
+  <section className="max-w-3xl text-gray-800 p-12">
+  <h2 className="text-2xl font-bold mb-4">Education</h2>
+  <div>
+    <h3 className="text-xl font-semibold">PSCMR College of Engineering and Technology, Vijayawada</h3>
+    <p className="italic text-gray-600">Bachelor of Computer Science and Engineering</p>
+    <p className="text-gray-600">Jun 2015 to May 2019</p>
+    <p className="mt-1 font-medium">Score: 82%</p>
+  </div>
+</section>
+
+  </ main>
+
+  )
+}
