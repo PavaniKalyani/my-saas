@@ -2,34 +2,35 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen gap-6">
-      
-      <div className="flex flex-col items-center gap-6 
-                   opacity-0
-                  animate-fadeUp">
+    <main className="min-h-screen flex items-center justify-center px-6">
 
-      <h1 className="text-4xl font-bold">
-        Pavani G
-      </h1>
+      <div className="max-w-4xl w-full text-center flex flex-col gap-6 opacity-0 animate-fadeUp">
 
-      <p className="text-lg text-gray-600">
-        Senior Data Engineer | Distributed Systems |Independant Consultant 
-      </p>
+        <h1 className="text-4xl md:text-5xl font-bold">
+          Lavanya Sunkara
+        </h1>
 
-      <div className="flex gap-6 mt-6">
-        <Link href="/about" className="underline">
-          About
-        </Link>
+        <p className="text-lg text-gray-400">
+          AI Engineer | Agentic AI, RAG, Streamlit | MS CS @ NJIT
+        </p>
 
-        <Link href="/projects" className="underline">
-          Projects
-        </Link>
+        {/* Optional navigation buttons */}
+        <div className="flex gap-6 mt-6 justify-center">
+          <Link href="/about" className="underline hover:text-gray-300">
+            About
+          </Link>
 
-        <Link href="/contact" className="underline">
-          Contact
-        </Link>
+          <Link href="/projects" className="underline hover:text-gray-300">
+            Projects
+          </Link>
+
+          <Link href="/contact" className="underline hover:text-gray-300">
+            Contact
+          </Link>
+        </div>
+
       </div>
-    </div>
+
     </main>
   );
 }

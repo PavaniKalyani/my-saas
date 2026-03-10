@@ -1,42 +1,59 @@
-export default function Home() 
-{
+import Link from "next/link";
+import Image from "next/image";
+
+export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-start justify-start bg-gray-50 p-6"> 
-    {/* Header + Contact Info (centered) */}
-      <div className="w-full flex flex-col items-center">
-        <h1 className="text-black text-3xl font-bold text-center">
-          Pavani Gopisetti | Data and AI Engineer
-        </h1>
+    <main className="min-h-screen flex items-center justify-center px-6">
+      
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.2fr] items-center gap-12 max-w-6xl w-full">
 
-        <div className="flex flex-col md:flex-row gap-4 mt-4 text-black text-center">
-          <p><span className="font-bold">Email:</span> pavani@dummymail.com</p>
-          <p><span className="font-bold">Mobile:</span> +91 xxx xxx xxx </p>
-          <p><span className="font-bold">Linkedin:</span> https://linkedin.com/in/pavanig</p>
-          <p><span className="font-bold">GitHub:</span> https://github.com/pavanig</p>
+        {/* LEFT SIDE - TEXT */}
+        
+        <div className="flex flex-col gap-6 opacity-0 animate-fadeUp text-center md:text-left">
+
+          <h1 className="text-4xl md:text-5xl font-bold">
+            Lavanya Sunkara
+          </h1>
+
+          <p className="text-lg text-gray-400">
+           AI Engineer | Agentic AI, RAG, Streamlit | MS CS @ NJIT
+          </p>
+
+          {/* 
+          <div className="flex gap-6 mt-6 justify-center md:justify-start">
+            <Link href="/about" className="underline">
+              About
+            </Link>
+
+            <Link href="/projects" className="underline">
+              Projects
+            </Link>
+
+            <Link href="/contact" className="underline">
+              Contact
+            </Link>
+          </div>
+          */}
         </div>
+
+        {/* RIGHT SIDE - IMAGE */}
+        <div className="flex justify-center md:justify-end opacity-0 animate-fadeUp">
+
+            <div className="max-w-2xl w-full rounded-2xl overflow-hidden shadow-lg border border-white/10">
+            <Image
+              src="/profile-placeholder.jpg"
+              alt="Lavanya Sunkara"
+              width={800}
+              height={1000}
+              className="object-cover"
+              priority
+            />
+          </div>
+
+        </div>
+
       </div>
-   
-  
 
-  {/* About Me */}
-  <section className="max-w-3xl mt-4 text-gray-800 text-left p-12">
-    <h2 className="text-2xl font-bold mb-4 ">About Me</h2>
-    <p>
-      6+ Years Experienced Data and AI Engineer with a successful track record of providing high-quality deliverables in building, optimizing, maintaining, and supporting Data Engineering Products. Seeking opportunities to contribute expertise and thrive in a challenging, ambitious environment.
-    </p>
-  </section>
-
-  <section className="max-w-3xl text-gray-800 p-12">
-  <h2 className="text-2xl font-bold mb-4">Education</h2>
-  <div>
-    <h3 className="text-xl font-semibold">PSCMR College of Engineering and Technology, Vijayawada</h3>
-    <p className="italic text-gray-600">Bachelor of Computer Science and Engineering</p>
-    <p className="text-gray-600">Jun 2015 to May 2019</p>
-    <p className="mt-1 font-medium">Score: 82%</p>
-  </div>
-</section>
-
-  </ main>
-
-  )
+    </main>
+  );
 }
